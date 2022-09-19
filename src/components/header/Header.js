@@ -1,3 +1,4 @@
+import React from "react";
 import SvgComponent from "../Assets/Logo.js";
 import "./Header.css";
 export default function Header() {
