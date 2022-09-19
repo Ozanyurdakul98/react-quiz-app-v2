@@ -11,7 +11,7 @@ export default function Navigation() {
       <nav className="App-Navigation">
         <ul className="App-Navigation-Nav">
           <li className="App-Navigation-Nav-Li">
-            <a href="#" className="App-Navigation-Nav-Li-A">
+            <a href="/#" className="App-Navigation-Nav-Li-A">
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faHouseUser}
@@ -19,7 +19,7 @@ export default function Navigation() {
             </a>
           </li>
           <li className="App-Navigation-Nav-Li">
-            <a href="#" className="App-Navigation-Nav-Li-A">
+            <a href="/#" className="App-Navigation-Nav-Li-A">
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faBookmark}
@@ -27,7 +27,7 @@ export default function Navigation() {
             </a>
           </li>
           <li className="App-Navigation-Nav-Li">
-            <a href="#" className="App-Navigation-Nav-Li-A">
+            <a href="/#" className="App-Navigation-Nav-Li-A">
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faUser}

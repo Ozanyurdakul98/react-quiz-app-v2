@@ -21,9 +21,15 @@
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .App-Navigation-Nav-Li {
-  flex: auto;
+  flex: 1;
+}
+.App-Navigation-Nav-Li-A {
+  width: 100%;
+  display: inline-block;
+  height: 79px;
 }
 .App-Navigation-Nav-Li-A:link {
   color: black;
@@ -33,4 +39,5 @@
 }
 .App-Navigation-Nav-Li-A-Icon {
   font-size: 35px;
+  padding: 20px;
 }
