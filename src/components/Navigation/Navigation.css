@@ -16,3 +16,21 @@
   background-clip: content-box;
   background-repeat: repeat;
 }
+
+.App-Navigation-Nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.App-Navigation-Nav-Li {
+  flex: auto;
+}
+.App-Navigation-Nav-Li-A:link {
+  color: black;
+}
+.App-Navigation-Nav-Li-A:visited {
+  color: black;
+}
+.App-Navigation-Nav-Li-A-Icon {
+  font-size: 35px;
+}
