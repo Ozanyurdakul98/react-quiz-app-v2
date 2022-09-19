@@ -2,6 +2,6 @@
   text-align: center;
   display: grid;
   height: 100vh;
-  grid-template-rows: 150px 1fr 75px;
+  grid-template-rows: 130px 1fr 75px;
   margin: 0;
 }
