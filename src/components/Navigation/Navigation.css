@@ -1,0 +1,5 @@
+.App-Navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
