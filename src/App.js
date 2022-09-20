@@ -1,12 +1,21 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
-import Main from "./components/Main/Main";
+import CreateCard from "./components/Cards/Cards";
 function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
+      <main>
+        <CreateCard
+          question="What's your name?"
+          answer="Testing this out"
+          tag="#1"
+          tag2="#2"
+          tag3="#3"
+          tag4="#4"
+        />
+      </main>
       <Navigation />
     </div>
   );

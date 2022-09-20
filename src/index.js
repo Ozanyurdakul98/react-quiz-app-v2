@@ -7,11 +7,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-    <script
-      defer
-      src="https://kit.fontawesome.com/1ea256a700.js"
-      crossorigin="anonymous"
-    ></script>
   </React.StrictMode>
 );
 
