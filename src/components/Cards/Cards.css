@@ -106,17 +106,17 @@
   text-transform: uppercase;
   border-radius: 4px;
 }
-.yellow {
+.App-main-Card-Tags-UL li:first-child a {
   background-color: #ffff00;
   color: black;
 }
-.blue {
+.App-main-Card-Tags-UL li:nth-child(3) a {
   background-color: #00ffff;
   color: black;
 }
-.green {
+.App-main-Card-Tags-UL li:nth-child(2) a {
   background-color: #008080;
 }
-.red {
+.App-main-Card-Tags-UL li:nth-child(4) a {
   background-color: #d40000;
 }
