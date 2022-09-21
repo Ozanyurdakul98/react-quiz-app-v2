@@ -4,6 +4,7 @@ import {
   faHouseUser,
   faBookmark,
   faUser,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation({ page, setPage }) {
@@ -44,6 +45,17 @@ export default function Navigation({ page, setPage }) {
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faBookmark}
+              />
+            </a>
+          </li>
+          <li className="App-Navigation-Nav-Li">
+            <a
+              className="App-Navigation-Nav-Li-A"
+              href="#main-Cards-CreateCard-H2"
+            >
+              <FontAwesomeIcon
+                className="App-Navigation-Nav-Li-A-Icon"
+                icon={faPlus}
               />
             </a>
           </li>

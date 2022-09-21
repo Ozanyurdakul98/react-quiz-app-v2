@@ -1,0 +1,81 @@
+.main-Cards-CreateCard {
+  display: flex;
+  flex-direction: column;
+}
+#main-Cards-CreateCard-H2 {
+  font-size: 35px;
+  text-align: center;
+}
+.main-Cards-CreateCard-FlexDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.createCardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(245, 245, 249),
+      rgba(241, 237, 237, 0.721)
+    ),
+    url("../../components/Assets/logo.svg");
+  background-size: 200px;
+  background-clip: content-box;
+  background-repeat: repeat;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  max-width: 400px;
+}
+.tagFieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tagFieldset div {
+  width: 40%;
+}
+legend {
+  font-size: 25px;
+  color: orangered;
+}
+/* _____________________HideShowAnswerButton__________________________*/
+.quizAnswer {
+  background-color: #ffff00;
+  display: none;
+  box-shadow: none;
+}
+.quizAnswer--active {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4d7d7;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.formTag {
+  width: 80%;
+}
+@media (max-width: 600px) {
+  .main-Cards-CreateCard-FlexDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
