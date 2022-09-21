@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./Navigation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,7 +6,11 @@ import {
   faBookmark,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+
 export default function Navigation() {
+  const [isShown, setIsShown] = useState(false);
+  const toggle = () => setIsShown((isShown) => !isShown);
+
   return (
     <>
       <nav className="App-Navigation">
