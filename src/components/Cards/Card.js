@@ -3,7 +3,7 @@ import "./Cards.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
-export default function CreateCard({ question, answer, tags, style }) {
+export default function Card({ question, answer, tags, style }) {
   const [isShown, setIsShown] = useState(false);
   const toggle = () => setIsShown((isShown) => !isShown);
   return (

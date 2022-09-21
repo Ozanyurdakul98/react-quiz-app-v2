@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Navigation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,9 +6,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navigation() {
-  const [page, setPage] = useState("home");
-  console.log(useState("home"));
+export default function Navigation({ page, setPage }) {
   return (
     <>
       <nav className="App-Navigation">
@@ -54,10 +51,10 @@ export default function Navigation() {
             <a
               href="/#"
               onClick={() => {
-                setPage("User");
+                setPage("Profile");
               }}
               className={
-                page === "User"
+                page === "Profile"
                   ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
                   : "App-Navigation-Nav-Li-A"
               }

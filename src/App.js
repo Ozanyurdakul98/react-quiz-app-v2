@@ -1,28 +1,22 @@
-import "./App.css";
-import Header from "./components/Header/Header";
-import Navigation from "./components/Navigation/Navigation";
-import CreateCard from "./components/Cards/Cards";
+import React, { useState } from "react";
 import { DB } from "./components/DB/DB.js";
+import Header from "./components/Header/Header";
+import Cards from "./pages/Cards/Cards";
+import Profile from "./pages/Profile/Profile.js";
+import Navigation from "./components/Navigation/Navigation";
+import "./App.css";
 
 function App() {
-  console.log(DB);
+  const [page, setPage] = useState("Home");
+
   return (
     <div className="App">
       <Header />
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
-        <section className="App-main-section">
-          {DB.map(({ question, answer, tags, id, style }) => (
-            <CreateCard
-              key={id}
-              question={question}
-              answer={answer}
-              tags={tags}
-              style={style}
-            />
-          ))}
-        </section>
+        {page === "Home" && <Cards cards={DB} />}
+        {page === "Profile" && <Profile />}
       </main>
-      <Navigation />
+      <Navigation page={page} setPage={setPage} />
     </div>
   );
 }
