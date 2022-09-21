@@ -7,7 +7,7 @@
   z-index: 1;
   margin-top: 50px;
   max-width: 325px;
-  height: 350px;
+  height: fit-content;
   width: 80%;
   border-radius: 10px;
   border: 5px solid black;

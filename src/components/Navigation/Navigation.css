@@ -41,3 +41,6 @@
   font-size: 35px;
   padding: 20px;
 }
+.App-Navigation-Nav-Li-A--activeHome {
+  background-color: blue;
+}

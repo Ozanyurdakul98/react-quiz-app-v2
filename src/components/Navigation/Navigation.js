@@ -8,15 +8,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navigation() {
-  const [isShown, setIsShown] = useState(false);
-  const toggle = () => setIsShown((isShown) => !isShown);
-
+  const [page, setPage] = useState("home");
+  console.log(useState("home"));
   return (
     <>
       <nav className="App-Navigation">
         <ul className="App-Navigation-Nav">
           <li className="App-Navigation-Nav-Li">
-            <a href="/#" className="App-Navigation-Nav-Li-A">
+            <a
+              href="/#"
+              onClick={() => {
+                setPage("Home");
+              }}
+              className={
+                page === "Home"
+                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
+                  : "App-Navigation-Nav-Li-A"
+              }
+            >
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faHouseUser}
@@ -24,7 +33,17 @@ export default function Navigation() {
             </a>
           </li>
           <li className="App-Navigation-Nav-Li">
-            <a href="/#" className="App-Navigation-Nav-Li-A">
+            <a
+              href="/#"
+              onClick={() => {
+                setPage("Bookmark");
+              }}
+              className={
+                page === "Bookmark"
+                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
+                  : "App-Navigation-Nav-Li-A"
+              }
+            >
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faBookmark}
@@ -32,7 +51,17 @@ export default function Navigation() {
             </a>
           </li>
           <li className="App-Navigation-Nav-Li">
-            <a href="/#" className="App-Navigation-Nav-Li-A">
+            <a
+              href="/#"
+              onClick={() => {
+                setPage("User");
+              }}
+              className={
+                page === "User"
+                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
+                  : "App-Navigation-Nav-Li-A"
+              }
+            >
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
                 icon={faUser}
