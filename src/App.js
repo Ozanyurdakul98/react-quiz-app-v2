@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
-        <>
+        <section className="App-main-section">
           {DB.map(({ question, answer, tags, id, style }) => (
             <CreateCard
               key={id}
@@ -20,7 +20,7 @@ function App() {
               style={style}
             />
           ))}
-        </>
+        </section>
       </main>
       <Navigation />
     </div>

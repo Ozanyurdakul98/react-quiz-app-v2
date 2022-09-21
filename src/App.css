@@ -5,3 +5,12 @@
   grid-template-rows: 130px 1fr 75px;
   margin: 0;
 }
+.App-main-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  gap: 15px;
+  padding-bottom: 150px;
+}
