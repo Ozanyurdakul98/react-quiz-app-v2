@@ -52,6 +52,9 @@ export default function Navigation({ page, setPage }) {
             <a
               className="App-Navigation-Nav-Li-A"
               href="#main-Cards-CreateCard-H2"
+              onClick={() => {
+                setPage("Home");
+              }}
             >
               <FontAwesomeIcon
                 className="App-Navigation-Nav-Li-A-Icon"
