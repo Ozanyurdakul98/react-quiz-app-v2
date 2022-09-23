@@ -14,17 +14,22 @@ function App() {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const { quizQuestion, quizAnswer } = Object.fromEntries(formData);
-    console.log({ quizQuestion, quizAnswer });
+    let { quizQuestion, quizAnswer, newTag, newTag2, newTag3, newTag4, id } =
+      Object.fromEntries(formData);
+    id = Number(id);
+    // console.log({ quizQuestion, quizAnswer });
+    // const value = event.target.value;
+    setCard((card) => [
+      ...card,
+      { id, question: quizQuestion, answer: quizAnswer, tags: [newTag] },
+    ]);
   }
 
   return (
     <div className="App">
       <Header />
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
-        {page === "Home" && (
-          <Cards cards={DB} card={card} createForm={createForm} />
-        )}
+        {page === "Home" && <Cards card={card} createForm={createForm} />}
         {page === "Profile" && <Profile />}
       </main>
       <Navigation page={page} setPage={setPage} />
