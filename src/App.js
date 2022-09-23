@@ -15,7 +15,6 @@ function App() {
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
         {page === "Home" && <Cards cards={DB} />}
         {page === "Profile" && <Profile />}
-        {page === "Home" && <Cards cards={DB} />}
       </main>
       <Navigation page={page} setPage={setPage} />
     </div>

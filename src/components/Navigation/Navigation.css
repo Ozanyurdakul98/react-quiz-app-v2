@@ -25,12 +25,14 @@
 }
 .App-Navigation-Nav-Li {
   flex: 1;
+  cursor: pointer;
 }
 .App-Navigation-Nav-Li-A {
   width: 100%;
   display: inline-block;
   height: 79px;
 }
+
 .App-Navigation-Nav-Li-A:link {
   color: black;
 }
