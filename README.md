@@ -4,8 +4,9 @@ This is a complete rewrite and extension of <a href="#"> Thats My Quiz</a> which
 The point in this rewrite was to train my comfortability with:
 
 - React components
-- conditional rendering (Navigation, Bookmarking, etc.)
 - props (passing on to several children)
+- Forms in react
+- conditional rendering (navigation, bookmarking, buttons etc.)
 - useState management (navigation, createCard-form, etc.)
 - useEffect principles
-- Forms in react
+- localStorage
