@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DB } from "./components/DB/DB.js";
 import Header from "./components/Header/Header";
 import Cards from "./pages/Cards/Cards";
@@ -8,7 +8,13 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState("Home");
-  const [card, setCard] = useState(DB);
+  const [card, setCard] = useState(() => {
+    return JSON.parse(localStorage.getItem("card")) ?? [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("card", JSON.stringify(card));
+  }, [card]);
 
   function createForm(event) {
     event.preventDefault();
