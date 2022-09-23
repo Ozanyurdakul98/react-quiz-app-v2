@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./CreateCard.css";
-export default function CreateCard() {
+
+export default function CreateCard({ createForm }) {
   return (
     <section className="main-Cards-CreateCard">
       <h2 id="main-Cards-CreateCard-H2">Contribute your own Quiz</h2>
@@ -20,7 +21,7 @@ export default function CreateCard() {
           </div>
         </div>
         <div class="body-s__main-s__createQuiz-s__createQuiz-c__form">
-          <form class="createCardForm" data-js="createCardForm">
+          <form className="createForm" onSubmit={createForm}>
             <fieldset>
               <legend>Do you have a good Question?</legend>
               <label for="quizQuestion">Question here:</label>
@@ -32,7 +33,6 @@ export default function CreateCard() {
                 maxlength="150"
                 placeholder="Your Question goes here"
                 required
-                data-js="quizQuestionInput"
               />
               <p data-js="question-counter" class="form__counter">
                 150 characters left

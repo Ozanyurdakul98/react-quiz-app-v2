@@ -1,6 +1,7 @@
 import Card from "../../components/Cards/Card";
 import CreateCard from "./CreateCard";
-export default function Cards({ cards }) {
+
+export default function Cards({ cards, card, createForm }) {
   return (
     <>
       <section className="App-main-section">
@@ -14,7 +15,7 @@ export default function Cards({ cards }) {
           />
         ))}
       </section>
-      <CreateCard />
+      <CreateCard createForm={createForm} />
     </>
   );
 }
