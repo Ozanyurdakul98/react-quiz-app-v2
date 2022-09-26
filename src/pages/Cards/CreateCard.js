@@ -3,11 +3,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./CreateCard.css";
 
-export default function CreateCard({ createForm }) {
-  const [question = "Your question goes here", setQuestion] = useState();
+export default function CreateCard({ newCard }) {
+  const [question, setQuestion] = useState("");
+  //To change
   const [answer = "Your answer goes here", setAnswer] = useState();
   const [tag, setTag] = useState();
-  const [id = parseInt(Math.random() * 100), setId] = useState();
+  //strings verwenden
+
+  function createForm(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    let { quizQuestion, quizAnswer, newTag, newTag2, newTag3, newTag4 } =
+      Object.fromEntries(formData);
+    // console.log({ quizQuestion, quizAnswer });
+    // const value = event.target.value;
+    newCard(quizQuestion, quizAnswer, newTag, newTag2, newTag3, newTag4);
+  }
 
   return (
     <section className="main-Cards-CreateCard">
@@ -18,7 +30,7 @@ export default function CreateCard({ createForm }) {
             <FontAwesomeIcon icon={faBookmark} />
           </button>
           <div className="App-main-Card-Question">
-            <p>{question}</p>
+            <p>{question === "" ? "Your Question goes here" : question}</p>
           </div>
           <div className="App-main-Card-Button">
             <button className="App-main-Card-Button-Button">Show Answer</button>
@@ -115,23 +127,6 @@ export default function CreateCard({ createForm }) {
                     type="text"
                     name="newTag4"
                     id="newTag4"
-                    minLength="2"
-                    maxLength="15"
-                    placeholder="Tag#4 here"
-                    className="formTag"
-                    data-js="newTagInput4"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="id">ID</label>
-                  <input
-                    type="number"
-                    value={id}
-                    onChange={(event) => {
-                      setId(event.target.value);
-                    }}
-                    name="id"
-                    id="id"
                     minLength="2"
                     maxLength="15"
                     placeholder="Tag#4 here"

@@ -1,7 +1,7 @@
 import Card from "../../components/Cards/Card";
 import CreateCard from "./CreateCard";
 
-export default function Cards({ card, createForm }) {
+export default function Cards({ card, initial }) {
   return (
     <>
       {console.log("cards(db): ")}
@@ -16,8 +16,16 @@ export default function Cards({ card, createForm }) {
             style={style}
           />
         ))}
+        {initial.map(({ question, answer, tags, id, style }) => (
+          <Card
+            key={id}
+            question={question}
+            answer={answer}
+            tags={tags}
+            style={style}
+          />
+        ))}
       </section>
-      <CreateCard createForm={createForm} />
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DB } from "./components/DB/DB.js";
 import Header from "./components/Header/Header";
 import Cards from "./pages/Cards/Cards";
+import CreateCard from "./pages/Cards/CreateCard.js";
 import Profile from "./pages/Profile/Profile.js";
 import Navigation from "./components/Navigation/Navigation";
 import "./App.css";
@@ -16,26 +17,21 @@ function App() {
     localStorage.setItem("card", JSON.stringify(card));
   }, [card]);
 
-  function createForm(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    let { quizQuestion, quizAnswer, newTag, newTag2, newTag3, newTag4, id } =
-      Object.fromEntries(formData);
-    id = Number(id);
-    // console.log({ quizQuestion, quizAnswer });
-    // const value = event.target.value;
-    setCard((card) => [
-      ...card,
-      { id, question: quizQuestion, answer: quizAnswer, tags: [newTag] },
-    ]);
+  function newCard(question, answer, ...tags) {
+    const id = Math.random().toString(36).substring(2);
+    setCard((card) => [...card, { id, question, answer, tags }]);
   }
 
   return (
     <div className="App">
       <Header />
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
-        {page === "Home" && <Cards card={card} createForm={createForm} />}
+        {page === "Home" && (
+          <>
+            <Cards card={card} initial={DB} newCard={newCard} />
+            <CreateCard newCard={newCard} />
+          </>
+        )}
         {page === "Profile" && <Profile />}
       </main>
       <Navigation page={page} setPage={setPage} />
