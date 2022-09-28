@@ -1,3 +1,5 @@
+import { NavHashLink as NavLink } from "react-router-hash-link";
+import styled from "styled-components";
 import "./Navigation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,81 +9,58 @@ import {
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navigation({ page, setPage }) {
+export default function Navigation() {
   return (
-    <>
-      <nav className="App-Navigation">
-        <ul className="App-Navigation-Nav">
-          <li className="App-Navigation-Nav-Li">
-            <a
-              href="/#"
-              onClick={() => {
-                setPage("Home");
-              }}
-              className={
-                page === "Home"
-                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
-                  : "App-Navigation-Nav-Li-A"
-              }
-            >
-              <FontAwesomeIcon
-                className="App-Navigation-Nav-Li-A-Icon"
-                icon={faHouseUser}
-              />
-            </a>
-          </li>
-          <li className="App-Navigation-Nav-Li">
-            <a
-              href="/#"
-              onClick={() => {
-                setPage("Bookmark");
-              }}
-              className={
-                page === "Bookmark"
-                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
-                  : "App-Navigation-Nav-Li-A"
-              }
-            >
-              <FontAwesomeIcon
-                className="App-Navigation-Nav-Li-A-Icon"
-                icon={faBookmark}
-              />
-            </a>
-          </li>
-          <li className="App-Navigation-Nav-Li">
-            <a
-              className="App-Navigation-Nav-Li-A"
-              href="#main-Cards-CreateCard-H2"
-              onClick={() => {
-                setPage("Home");
-              }}
-            >
-              <FontAwesomeIcon
-                className="App-Navigation-Nav-Li-A-Icon"
-                icon={faPlus}
-              />
-            </a>
-          </li>
-          <li className="App-Navigation-Nav-Li">
-            <a
-              href="/#"
-              onClick={() => {
-                setPage("Profile");
-              }}
-              className={
-                page === "Profile"
-                  ? "App-Navigation-Nav-Li-A App-Navigation-Nav-Li-A--activeHome"
-                  : "App-Navigation-Nav-Li-A"
-              }
-            >
-              <FontAwesomeIcon
-                className="App-Navigation-Nav-Li-A-Icon"
-                icon={faUser}
-              />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </>
+    <nav className="App-Navigation">
+      <ul className="App-Navigation-Nav">
+        <LinkButton to="/" end>
+          <FontAwesomeIcon
+            className="App-Navigation-Nav-Li-A-Icon"
+            icon={faHouseUser}
+          />
+        </LinkButton>
+        <LinkButton to="/bookmarked">
+          <FontAwesomeIcon
+            className="App-Navigation-Nav-Li-A-Icon"
+            icon={faBookmark}
+          />
+        </LinkButton>
+        <Wrapper>
+          <LinkButton to="/#main-Cards-CreateCard-H2" id="linkHome">
+            <FontAwesomeIcon
+              className="App-Navigation-Nav-Li-A-Icon"
+              icon={faPlus}
+            />
+          </LinkButton>
+        </Wrapper>
+        <LinkButton to="/user">
+          <FontAwesomeIcon
+            className="App-Navigation-Nav-Li-A-Icon"
+            icon={faUser}
+          />
+        </LinkButton>
+      </ul>
+    </nav>
   );
 }
+
+const LinkButton = styled(NavLink)`
+  width: 100%;
+  display: inline-block;
+  height: 79px;
+  &.active {
+    background-color: hotpink;
+  }
+  &:visited {
+    color: black;
+  }
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  display: inline-block;
+  height: 79px;
+  #linkHome {
+    background-color: inherit;
+  }
+`;

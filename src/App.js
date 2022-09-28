@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { DB } from "./components/DB/DB.js";
 import Header from "./components/Header/Header";
 import Cards from "./pages/Cards/Cards";
@@ -26,15 +27,22 @@ function App() {
     <div className="App">
       <Header />
       <main style={{ overflowY: "scroll", paddingBottom: "150px" }}>
-        {page === "Home" && (
-          <>
-            <Cards card={card} initial={DB} newCard={newCard} />
-            <CreateCard newCard={newCard} />
-          </>
-        )}
-        {page === "Profile" && <Profile />}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Cards card={card} initial={DB} newCard={newCard} />
+                <CreateCard newCard={newCard} />
+              </>
+            }
+          />
+          <Route path="/bookmarked" element={<h1>functionality to come</h1>} />
+          {/* <Route path="/#main-Cards-CreateCard-H2" /> */}
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
       </main>
-      <Navigation page={page} setPage={setPage} />
+      <Navigation />
     </div>
   );
 }
