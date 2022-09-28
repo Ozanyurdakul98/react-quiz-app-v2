@@ -9,7 +9,6 @@ import Navigation from "./components/Navigation/Navigation";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("Home");
   const [card, setCard] = useState(() => {
     return JSON.parse(localStorage.getItem("card")) ?? [];
   });

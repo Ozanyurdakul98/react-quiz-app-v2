@@ -33,7 +33,7 @@ export default function Navigation() {
             />
           </LinkButton>
         </Wrapper>
-        <LinkButton to="/user">
+        <LinkButton to="/profile">
           <FontAwesomeIcon
             className="App-Navigation-Nav-Li-A-Icon"
             icon={faUser}
