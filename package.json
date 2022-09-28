@@ -1,6 +1,7 @@
 {
   "name": "react-quiz-app-v2",
   "version": "0.1.0",
+  "homepage": "https://Ozanyurdakul98.github.io/react-quiz-app-v2",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -19,10 +20,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
