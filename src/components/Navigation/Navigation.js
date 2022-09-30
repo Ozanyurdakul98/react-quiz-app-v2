@@ -48,6 +48,7 @@ const LinkButton = styled(NavLink)`
   width: 100%;
   display: inline-block;
   height: 79px;
+  color: black;
   &.active {
     background-color: hotpink;
   }
