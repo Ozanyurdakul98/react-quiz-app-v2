@@ -1,0 +1,43 @@
+.Header {
+  height: 130px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid black;
+  background-color: white;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255, 0.52),
+      rgba(255, 255, 255)
+    ),
+    url("../Assets/logo.svg");
+  background-size: 90px;
+  background-clip: content-box;
+  background-repeat: repeat;
+}
+.Header-logo {
+  width: 365px;
+  height: 100px;
+  padding: 0;
+}
+.Header-heading1 {
+  padding: 0;
+  margin: -20px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  width: 400px;
+}
+
+@media (max-width: 600px) {
+  .Header-heading1 {
+    padding: 0;
+    margin: -20px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    width: 300px;
+  }
+}
