@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { DB } from "./components/DB/DB.js";
-import Header from "./components/Header/Header";
+import Header from "./components/Header/Header.js";
 import Cards from "./pages/Cards/Cards";
 import CreateCard from "./pages/Cards/CreateCard.js";
 import Profile from "./pages/Profile/Profile.js";
